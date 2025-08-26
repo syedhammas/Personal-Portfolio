@@ -1,0 +1,283 @@
+<svg viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Vibrant neon gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#00d4ff;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0099ff;stop-opacity:0.7"/>
+    </linearGradient>
+    
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#ff4081;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#e91e63;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <linearGradient id="holographic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8"/>
+      <stop offset="25%" style="stop-color:#00ffff;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#ffff00;stop-opacity:0.7"/>
+      <stop offset="75%" style="stop-color:#ff4081;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.9"/>
+      <animateTransform attributeName="gradientTransform" 
+                        type="rotate" 
+                        values="0 300 400;360 300 400" 
+                        dur="10s" 
+                        repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0015;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1a0030;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Intense glow effects -->
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="megaGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadowEffect">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#00ffff" flood-opacity="0.8"/>
+    </filter>
+
+    <!-- Animated background pattern -->
+    <pattern id="matrixPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="transparent"/>
+      <circle cx="20" cy="20" r="1" fill="url(#neonCyan)" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </pattern>
+
+    <!-- Pulse animation -->
+    <radialGradient id="pulseGrad">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dynamic background -->
+  <rect width="600" height="800" fill="#000015"/>
+  <rect width="600" height="800" fill="url(#matrixPattern)"/>
+
+  <!-- Pulsing energy field -->
+  <circle cx="300" cy="400" r="300" fill="url(#pulseGrad)" opacity="0.1">
+    <animate attributeName="r" values="200;350;200" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Main holographic screen -->
+  <g transform="translate(180, 120)">
+    <!-- Screen with neon border -->
+    <rect x="-5" y="-5" width="290" height="190" rx="15" 
+          fill="none" 
+          stroke="url(#holographic)" 
+          stroke-width="3" 
+          filter="url(#intenseGlow)">
+      <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="0" y="0" width="280" height="180" rx="12" fill="url(#screenGlow)"/>
+    
+    <!-- Holographic interface -->
+    <rect x="10" y="10" width="260" height="160" rx="8" fill="rgba(0,255,255,0.05)" stroke="url(#neonCyan)" stroke-width="1"/>
+    
+    <!-- Floating window controls -->
+    <circle cx="25" cy="25" r="5" fill="#ff0080" filter="url(#intenseGlow)">
+      <animate attributeName="fill" values="#ff0080;#ff40a0;#ff0080" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="45" cy="25" r="5" fill="#ffff00" filter="url(#intenseGlow)">
+      <animate attributeName="fill" values="#ffff00;#ffff80;#ffff00" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="65" cy="25" r="5" fill="#00ff80" filter="url(#intenseGlow)">
+      <animate attributeName="fill" values="#00ff80;#40ffb0;#00ff80" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Holographic code display -->
+    <g opacity="0.9">
+      <!-- Syntax highlighted code with neon colors -->
+      <text x="20" y="55" font-family="monospace" font-size="9" fill="#ff00ff" filter="url(#intenseGlow)">const</text>
+      <text x="50" y="55" font-family="monospace" font-size="9" fill="#00ffff">developer = {</text>
+      
+      <text x="30" y="70" font-family="monospace" font-size="8" fill="#ffff00">skills:</text>
+      <text x="70" y="70" font-family="monospace" font-size="8" fill="#00ff80">['React', 'Next.js'],</text>
+      
+      <text x="30" y="85" font-family="monospace" font-size="8" fill="#ffff00">passion:</text>
+      <text x="75" y="85" font-family="monospace" font-size="8" fill="#ff4081">'creating magic',</text>
+      
+      <text x="30" y="100" font-family="monospace" font-size="8" fill="#ffff00">status:</text>
+      <text x="70" y="100" font-family="monospace" font-size="8" fill="#00ff80">'coding dreams'</text>
+      
+      <text x="20" y="115" font-family="monospace" font-size="9" fill="#00ffff">};</text>
+    </g>
+    
+    <!-- Animated cursor -->
+    <rect x="130" y="112" width="2" height="12" fill="url(#holographic)" filter="url(#intenseGlow)">
+      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Floating holographic elements -->
+  <g transform="translate(100, 350)">
+    <polygon points="0,0 30,0 35,20 -5,20" 
+             fill="url(#neonCyan)" 
+             opacity="0.7" 
+             filter="url(#megaGlow)"
+             transform-origin="15 10">
+      <animateTransform attributeName="transform" 
+                        type="rotate" 
+                        values="0 15 10;360 15 10" 
+                        dur="12s" 
+                        repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Massive floating braces -->
+  <text x="50" y="500" font-family="monospace" font-size="80" fill="url(#holographic)" 
+        opacity="0.6" filter="url(#megaGlow)" font-weight="100">{
+    <animateTransform attributeName="transform" 
+                      type="translate" 
+                      values="0,0; 10,-5; 0,0" 
+                      dur="6s" 
+                      repeatCount="indefinite"/>
+  </text>
+  
+  <text x="480" y="600" font-family="monospace" font-size="80" fill="url(#holographic)" 
+        opacity="0.6" filter="url(#megaGlow)" font-weight="100">}
+    <animateTransform attributeName="transform" 
+                      type="translate" 
+                      values="0,0; -10,5; 0,0" 
+                      dur="6s" 
+                      repeatCount="indefinite"/>
+  </text>
+
+  <!-- Cyberpunk geometric shapes -->
+  <g transform="translate(450, 150)">
+    <polygon points="0,0 40,20 30,60 -10,40" 
+             fill="url(#neonPink)" 
+             opacity="0.8" 
+             filter="url(#intenseGlow)">
+      <animateTransform attributeName="transform" 
+                        type="rotate" 
+                        values="0 20 30;360 20 30" 
+                        dur="15s" 
+                        repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Energy orbs -->
+  <circle cx="120" cy="250" r="15" fill="url(#neonCyan)" opacity="0.8" filter="url(#intenseGlow)">
+    <animate attributeName="cy" values="250;230;250" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="15;20;15" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="500" cy="400" r="12" fill="url(#neonPink)" opacity="0.7" filter="url(#intenseGlow)">
+    <animate attributeName="cx" values="500;480;500" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Holographic tech stack icons -->
+  <g transform="translate(300, 450)">
+    <!-- React atom with neon glow -->
+    <g opacity="0.9" filter="url(#intenseGlow)">
+      <circle cx="0" cy="0" r="25" fill="none" stroke="url(#neonCyan)" stroke-width="3"/>
+      <circle cx="0" cy="0" r="4" fill="url(#neonCyan)"/>
+      <ellipse cx="0" cy="0" rx="35" ry="15" fill="none" stroke="url(#holographic)" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="35" ry="15" fill="none" stroke="url(#holographic)" stroke-width="2" transform="rotate(60)"/>
+      <ellipse cx="0" cy="0" rx="35" ry="15" fill="none" stroke="url(#holographic)" stroke-width="2" transform="rotate(-60)"/>
+    </g>
+    <animateTransform attributeName="transform" 
+                      type="rotate" 
+                      values="0 300 450;360 300 450" 
+                      dur="10s" 
+                      repeatCount="indefinite"/>
+  </g>
+
+  <!-- JavaScript logo with glow -->
+  <g transform="translate(200, 500)">
+    <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#f7df1e" filter="url(#intenseGlow)"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#000">JS</text>
+  </g>
+
+  <!-- Data streams -->
+  <g opacity="0.8">
+    <path d="M180,320 Q300,280 450,320 Q500,340 520,380" 
+          stroke="url(#holographic)" 
+          stroke-width="3" 
+          fill="none"
+          filter="url(#intenseGlow)"
+          stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M100,400 Q200,420 300,400 Q400,380 480,400" 
+          stroke="url(#neonPink)" 
+          stroke-width="2" 
+          fill="none"
+          filter="url(#intenseGlow)"
+          stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" values="0;-14" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Terminal with cyberpunk styling -->
+  <g transform="translate(80, 650)">
+    <rect x="0" y="0" width="440" height="100" rx="15" 
+          fill="rgba(0,0,0,0.8)" 
+          stroke="url(#neonCyan)" 
+          stroke-width="2" 
+          filter="url(#intenseGlow)"/>
+    
+    <!-- Terminal prompt -->
+    <text x="20" y="30" font-family="monospace" font-size="12" fill="url(#neonCyan)" filter="url(#intenseGlow)">
+      syed@portfolio:~$ npm run magic
+    </text>
+    <text x="20" y="50" font-family="monospace" font-size="12" fill="url(#neonPink)">
+      ✨ Building incredible experiences...
+    </text>
+    <text x="20" y="70" font-family="monospace" font-size="12" fill="#00ff80">
+      🚀 Performance: 100% | Dreams: Activated
+    </text>
+    
+    <!-- Blinking cursor -->
+    <rect x="340" y="62" width="8" height="12" fill="url(#holographic)">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Floating particles -->
+  <g opacity="0.6">
+    <circle cx="150" cy="100" r="2" fill="url(#neonCyan)">
+      <animate attributeName="cy" values="100;80;100" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="250" r="3" fill="url(#neonPink)">
+      <animate attributeName="cx" values="450;470;450" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="150" r="2" fill="url(#holographic)">
+      <animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Status indicator with intense glow -->
+  <g transform="translate(520, 50)">
+    <circle cx="0" cy="0" r="8" fill="url(#neonCyan)" filter="url(#megaGlow)">
+      <animate attributeName="fill" values="url(#neonCyan);url(#neonPink);url(#neonCyan)" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="15" y="5" font-family="Arial" font-size="12" fill="url(#holographic)" font-weight="bold">LIVE</text>
+  </g>
+</svg>
