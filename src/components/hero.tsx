@@ -86,7 +86,7 @@ export default function Hero() {
                                 transition={{ duration: 1 }}
                                 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 drop-shadow-xl leading-tight text-white"
                             >
-                                Hi, I'm <br /><span className="text-cyan-400">Syed Hammas</span>
+                                Hi, I'm <br /><span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Syed Hammas</span>
                             </motion.h1>
 
                             {/* Sub-heading */}
@@ -142,13 +142,13 @@ export default function Hero() {
                                 transition={{ duration: 2 }}
                                 className="flex gap-6 text-3xl lg:text-4xl text-gray-400 mb-8 lg:mb-10"
                             >
-                                <a href="https://github.com/" target="_blank" className="hover:text-cyan-400 transition duration-300">
+                                <a href="https://github.com/syedhammas/" target="_blank" className="hover:text-cyan-400 transition duration-300">
                                     <FaGithub />
                                 </a>
                                 <a href="https://linkedin.com/" target="_blank" className="hover:text-cyan-400 transition duration-300">
                                     <FaLinkedin />
                                 </a>
-                                <a href="https://twitter.com/" target="_blank" className="hover:text-cyan-400 transition duration-300">
+                                <a href="https://https://x.com/SyedHammas15955/" target="_blank" className="hover:text-cyan-400 transition duration-300">
                                     <FaTwitter />
                                 </a>
                             </motion.div>

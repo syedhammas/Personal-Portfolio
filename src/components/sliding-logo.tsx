@@ -33,7 +33,7 @@ export interface SlidingLogoMarqueeProps {
 
 export function SlidingLogoMarquee({
   items,
-  speed = 30,
+  speed = 20,
   pauseOnHover = true,
   enableBlur = true,
   blurIntensity = 0,

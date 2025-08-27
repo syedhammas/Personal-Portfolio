@@ -1,106 +1,75 @@
-// import React from "react";
-// import { motion } from "framer-motion";
+"use client";
+import { motion } from "framer-motion";
 
-// const projects = [
-//     {
-//         title: "Eagle-FC-Website",
-//         desc: "A modern website for a fictional football club. Built with Next.js and Tailwind CSS, deployed on Vercel.",
-//         image: "/eagle.png",
-//         tags: ["Next.js", "Tailwind CSS", "Vercel"],
-//     },
-//     {
-//         title: "GamePro Host",
-//         desc: "An online platform offering game hosting services, player statistics, and community features. Fully responsive and deployed via Vercel.",
-//         image: "/game-pro.png",
-//         tags: ["React", "Tailwind CSS", "Vercel"],
-//     },
-//     {
-//         title: "Comerzio",
-//         desc: "A commerce-focused app for showcasing and managing products. Built using React and Node.js, hosted on Fly.io.",
-//         image: "/eagle.png",
-//         tags: ["React", "Node.js", "Fly.io"],
-//     },
-//     {
-//         title: "Nutritionist",
-//         desc: "Personalized nutrition coaching platform with user dashboard and appointment booking.",
-//         image: "/eagle.png",
-//         tags: ["Next.js", "Tailwind CSS"],
-//     },
-//     {
-//         title: "Portfolio Website",
-//         desc: "Personal portfolio website to showcase projects and skills. Built with Next.js and Tailwind CSS.",
-//         image: "/eagle.png",
-//         tags: ["Next.js", "Tailwind CSS"],
-//     },
-//     {
-//         title: "Digital Solutions",
-//         desc: "Landing page for digital solutions and SaaS products. Responsive and modern UI.",
-//         image: "/eagle.png",
-//         tags: ["React", "Tailwind CSS"],
-//     },
-// ];
+export default function Projects() {
+    return (
+        <section id="projects" className="max-w-7xl mx-auto py-20 bg-black text-white">
+            {/* Heading */}
+            <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+                    My <span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Projects</span>
+                </h2>
+                <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+                    A collection of my recent work showcasing creativity, modern UI, and performance.
+                </p>
+                <div className="w-24 h-1 bg-cyan-400 mx-auto mt-4 rounded-full shadow-[0_0_20px_#22d3ee]"></div>
+            </div>
 
-// export default function Project() {
-//     return (
-//         <section className="relative py-28 px-6 md:px-16 flex justify-center items-center overflow-hidden bg-transparent">
-//             {/* Decorative Blobs */}
-//             <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-cyan-400/30 rounded-full filter blur-3xl opacity-40 animate-pulse pointer-events-none"></div>
-//             <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-purple-400/30 rounded-full filter blur-3xl opacity-40 animate-pulse pointer-events-none"></div>
-//             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-cyan-100/60 via-white/0 to-white/0 rounded-full blur-2xl opacity-40 pointer-events-none"></div>
+            {/* Projects Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4 md:px-12">
+                {[1, 2, 3, 4, 5, 6].map((project, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: i * 0.15 }}
+                        whileHover={{ scale: 1.02 }}
+                        className="relative group bg-gray-900/70 border border-gray-800 rounded-2xl overflow-hidden shadow-lg backdrop-blur-md hover:border-cyan-400 hover:shadow-[0_0_30px_#22d3ee] transition duration-300"
+                    >
+                        {/* Project Image with Overlay */}
+                        <div className="relative h-52 overflow-hidden">
+                            <img
+                                src={`https://picsum.photos/500/300?random=${i}`}
+                                alt="Project"
+                                className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                            />
+                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                                <a
+                                    href="#"
+                                    className="px-4 py-2 text-sm font-semibold text-black bg-cyan-400 rounded-lg shadow-lg hover:bg-cyan-300 transition"
+                                >
+                                    View Project
+                                </a>
+                            </div>
+                        </div>
 
-//             <motion.div
-//                 initial={{ opacity: 0, y: 40 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 1 }}
-//                 viewport={{ once: true, amount: 0.2 }}
-//                 className="max-w-6xl w-full relative z-10 bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-2xl p-0 md:p-0"
-//             >
-//                 <div className="px-6 md:px-16 pt-10">
-//                     <motion.h2
-//                         initial={{ opacity: 0, y: -30 }}
-//                         whileInView={{ opacity: 1, y: 0 }}
-//                         transition={{ duration: 0.7 }}
-//                         className="text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-center md:text-left"
-//                     >
-//                         Featured Projects
-//                     </motion.h2>
-//                     <div className="w-28 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mb-12 mx-auto md:mx-0"></div>
-//                     <p className="text-gray-100/90 text-lg md:text-xl leading-relaxed mb-14 text-center md:text-left">
-//                         Explore some of my recent work and personal projects
-//                     </p>
-//                 </div>
-//                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6 md:p-16">
-//                     {projects.map((project, idx) => (
-//                         <motion.div
-//                             key={idx}
-//                             whileHover={{ scale: 1.04, rotate: 1 }}
-//                             className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden shadow-lg flex flex-col transition-all duration-200 hover:shadow-cyan-500/30"
-//                         >
-//                             <div className="w-full h-48 bg-gray-800">
-//                                 <img
-//                                     src={project.image}
-//                                     alt={project.title}
-//                                     className="object-cover w-full h-full"
-//                                 />
-//                             </div>
-//                             <div className="p-6 flex-1 flex flex-col">
-//                                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-//                                 <p className="text-gray-300 mb-4 flex-1">{project.desc}</p>
-//                                 <div className="flex flex-wrap gap-2 mt-auto">
-//                                     {project.tags.map((tag, i) => (
-//                                         <span
-//                                             key={i}
-//                                             className="bg-white/10 border border-cyan-400 text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold"
-//                                         >
-//                                             {tag}
-//                                         </span>
-//                                     ))}
-//                                 </div>
-//                             </div>
-//                         </motion.div>
-//                     ))}
-//                 </div>
-//             </motion.div>
-//         </section>
-//     );
-// }
+                        {/* Project Content */}
+                        <div className="p-6">
+                            <h3 className="text-xl font-semibold text-cyan-300">Project Title</h3>
+                            <p className="text-gray-400 text-sm mt-2">
+                                Short description about the project. Highlights features and stack.
+                            </p>
+
+                            {/* Tech Stack */}
+                            <div className="flex flex-wrap gap-2 mt-4">
+                                <span className="text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full">React</span>
+                                <span className="text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full">Next.js</span>
+                                <span className="text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full">Tailwind</span>
+                            </div>
+
+                            {/* Buttons */}
+                            <div className="flex items-center gap-4 mt-6">
+                                <a href="#" className="px-4 py-2 text-sm font-semibold text-black bg-cyan-400 rounded-lg hover:bg-cyan-300 transition shadow-md">
+                                    Live Demo
+                                </a>
+                                <a href="#" className="px-4 py-2 text-sm font-semibold text-cyan-400 border border-cyan-400 rounded-lg hover:bg-cyan-400/10 transition">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+        </section>
+    );
+}

@@ -26,7 +26,7 @@ export default function Services() {
     return (
         <section className="py-24 px-6 text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-12">
-                Our <span className="text-cyan-400">Services</span>
+                Our <span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Services </span>
             </h2>
 
             <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12">
@@ -35,6 +35,8 @@ export default function Services() {
                 UI/UX experiences and building scalable web applications — I deliver
                 clean, optimized, and user-focused results.
             </p>
+            <div className="w-42 h-1 bg-cyan-400 mt-4 rounded-full shadow-[0_0_20px_#22d3ee] mx-auto"></div>
+
 
 
             <div className="grid grid-cols-1 md:grid-cols-3 py-16 gap-12 max-w-6xl mx-auto">

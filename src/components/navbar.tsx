@@ -41,12 +41,12 @@ export default function Navbar() {
     return (
         //  bg-gradient-to-br from-gray-900 via-black to-gray-800
 
-        <div className="fixed md:top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-5xl ">
+        <div className="fixed left-1/2 transform -translate-x-1/2 z-50 w-full ">
 
             {/* Navbar */}
             <div className={`w-full z-50 transition-all duration-500 ${hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}>
                 {/* Desktop Navbar - Full Width */}
-                <nav className="hidden md:flex items-center justify-between w-full px-8 py-6 border-b border-white">
+                <nav className="hidden md:flex items-center justify-between bg-black w-full px-8 py-6 border-b border-white">
                     {/* Logo / Brand */}
                     <div className="flex-shrink-0">
                         <h1 className="text-cyan-400 text-3xl font-extrabold tracking-wide"

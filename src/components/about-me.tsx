@@ -54,10 +54,10 @@ export default function CodeEditor() {
                             viewport={{ once: true }}
                             className="mb-8"
                         >
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-white text-center lg:text-left">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl drop-shadow-[0_0_25px_#22d3ee] font-extrabold mb-4 text-white text-center lg:text-left">
                                 About <span className="text-cyan-400">Me</span>
                             </h2>
-                            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto lg:mx-0"></div>
+                            <div className="w-32 h-1 bg-cyan-400 mt-4 rounded-full shadow-[0_0_18px_#22d3ee]" />
                         </motion.div>
 
                         {/* Role */}
@@ -134,7 +134,7 @@ export default function CodeEditor() {
                                     <div className="w-3 h-3 rounded-full bg-black"></div>
                                     <div className="w-3 h-3 rounded-full bg-cyan-900"></div>
                                 </div>
-                                <div className="ml-4 text-lg text-black">about-me.jsx</div>
+                                <div className="ml-4 text-lg text-black">about-me</div>
                             </div>
 
                             {/* Code Content */}
