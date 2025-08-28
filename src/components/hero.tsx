@@ -73,7 +73,7 @@ export default function Hero() {
 
     return (
         <>
-            <section className="w-full flex items-center pt-32 px-4 md:pt-48 md:px-8 lg:px-20 bg-transparent">
+            <section className="w-full flex items-center pt-32 px-4 md:pt-20 md:px-8 lg:px-20 bg-transparent">
                 <div className="w-full max-w-7xl mx-auto">
                     <div className="flex flex-col-reverse pt-16 lg:flex-row items-center justify-between gap-12 lg:gap-16">
 
@@ -86,7 +86,7 @@ export default function Hero() {
                                 transition={{ duration: 1 }}
                                 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 drop-shadow-xl leading-tight text-white"
                             >
-                                Hi, I'm <br /><span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Syed Hammas</span>
+                                Hi, I'm <br /><span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Syed Aliyar</span>
                             </motion.h1>
 
                             {/* Sub-heading */}

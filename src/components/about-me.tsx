@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function CodeEditor() {
+export default function AboutMe() {
 
-    const shortBio = "Hi, I'm Syed Hammas, a passionate Front-End Developer based in Islamabad, Pakistan. With 1 year of hands-on experience, I build modern, responsive, and user-friendly web applications using React, Next.js, and Tailwind CSS.";
+    const shortBio = "Hi, I'm Syed Aliyar, a passionate Front-End Developer based in Islamabad, Pakistan. With 1 year of hands-on experience, I build modern, responsive, and user-friendly web applications using React, Next.js, and Tailwind CSS.";
 
-    const fullBio = "Hi, I'm Syed Hammas, a passionate Front-End Developer based in Islamabad, Pakistan. With 1 year of hands-on experience, I build modern, responsive, and user-friendly web applications using React, Next.js, and Tailwind CSS. I specialize in converting Figma designs into pixel-perfect, production-ready websites. My expertise includes creating scalable applications with modern JavaScript frameworks, implementing responsive designs, and optimizing user experiences. I'm dedicated to writing clean, maintainable code and staying updated with the latest web development trends and technologies.";
+    const fullBio = "Hi, I'm Syed Aliyar, a passionate Front-End Developer based in Islamabad, Pakistan. With 1 year of hands-on experience, I build modern, responsive, and user-friendly web applications using React, Next.js, and Tailwind CSS. I specialize in converting Figma designs into pixel-perfect, production-ready websites. My expertise includes creating scalable applications with modern JavaScript frameworks, implementing responsive designs, and optimizing user experiences. I'm dedicated to writing clean, maintainable code and staying updated with the latest web development trends and technologies.";
 
     const [currentLine, setCurrentLine] = useState(0);
 
@@ -17,7 +17,7 @@ export default function CodeEditor() {
         "",
         "const AboutMe = () => (",
         "  <div className=\"container\">",
-        "    <h1>Syed Hammas</h1>",
+        "    <h1>Syed Aliyar</h1>",
         "    <h2>Frontend Developer</h2>",
         "    <Skills />",
         "    <Projects />",
@@ -142,26 +142,34 @@ export default function CodeEditor() {
                                 {codeLines.map((line, index) => (
                                     <motion.div
                                         key={index}
-                                        initial={{ opacity: 0 }}
+                                        initial={{ opacity: 0, x: -10 }}
                                         animate={{
-                                            opacity: index <= currentLine ? 1 : 0.4,
+                                            opacity: index <= currentLine ? 1 : 0,
+                                            x: index <= currentLine ? 0 : -10,
                                             backgroundColor: index === currentLine ? 'rgba(6, 182, 212, 0.1)' : 'transparent'
                                         }}
-                                        transition={{ duration: 0.3 }}
+                                        transition={{ duration: 0.4, ease: "easeOut" }}
                                         className="flex py-1 px-2 rounded"
                                     >
-                                        <span className="text-gray-600 select-none mr-4 w-6 text-right">{index + 1}</span>
+                                        {/* Line Numbers */}
+                                        <span className="text-gray-600 select-none mr-4 w-6 text-right">
+                                            {index + 1}
+                                        </span>
+
+                                        {/* Syntax Highlighted Code */}
                                         <span
                                             className={
-                                                line.includes('import') ? 'text-purple-400' :
-                                                    line.includes('const') || line.includes('export') ? 'text-purple-400' :
+                                                line.includes('import') ? 'text-cyan-400' :
+                                                    line.includes('const') || line.includes('export') ? 'text-cyan-400' :
                                                         line.includes('<') ? 'text-cyan-400' :
-                                                            line.includes('Syed Hammas') || line.includes('Frontend Developer') ? 'text-green-400' :
+                                                            line.includes('Syed Aliyar') || line.includes('Frontend Developer') ? 'text-cyan-400' :
                                                                 'text-gray-300'
                                             }
                                         >
                                             {line}
                                         </span>
+
+                                        {/* Blinking Cursor */}
                                         {index === currentLine && (
                                             <motion.span
                                                 animate={{ opacity: [1, 0] }}
@@ -172,6 +180,7 @@ export default function CodeEditor() {
                                     </motion.div>
                                 ))}
                             </div>
+
 
                             {/* Editor Footer */}
                             <div className="px-4 py-2 bg-cyan-400 border-t border-gray-700 text-xs text-gray-500 flex justify-between">

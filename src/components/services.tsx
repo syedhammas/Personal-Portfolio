@@ -24,7 +24,9 @@ export default function Services() {
 
 
     return (
-        <section className="py-24 px-6 text-center">
+        <section
+            id="services"
+            className="py-24 px-6 text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-12">
                 Our <span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Services </span>
             </h2>

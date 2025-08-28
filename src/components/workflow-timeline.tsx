@@ -17,14 +17,14 @@ export default function WorkflowTimeline() {
             id: 2,
             title: "Design",
             desc:
-                "Wireframes → high-fidelity UI in Figma. Focus on accessibility, consistency and delight.",
+                "Wireframes → high-fidelity UI. Focus on accessibility, consistency and delight.",
             icon: Brush,
         },
         {
             id: 3,
             title: "Development",
             desc:
-                "Build fast, responsive, and maintainable UI with Next.js, Tailwind & TypeScript.",
+                "Build fast, responsive, and maintainable UI with Next.js, Tailwind, TypeScript & etc.",
             icon: Code2,
         },
         {

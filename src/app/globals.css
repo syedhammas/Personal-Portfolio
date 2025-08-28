@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,7 +24,6 @@ body {
   font-family: 'Geist Sans', sans-serif;
 }
 
-
 @keyframes border-rotate {
   0% {
     background-position: 0% 50%;
@@ -40,6 +37,11 @@ body {
     background-position: 0% 50%;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 .animate-border-rotate {
   background-size: 200% 200%;

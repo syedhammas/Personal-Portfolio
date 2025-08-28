@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import React from "react";
 import {
     FaHtml5,
     FaCss3Alt,
@@ -43,7 +44,9 @@ export default function Skills() {
     ];
 
     return (
-        <section className="relative py-20 md:py-30 px-6 bg-transparent overflow-hidden">
+        <section
+            id="skills"
+            className="relative py-20 md:py-30 px-6 bg-transparent overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between  gap-12">
 
                 {/* Left Side Content */}

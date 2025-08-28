@@ -4,7 +4,9 @@ import About from "@/components/about-me";
 import Skills from "@/components/skills";
 import Services from "@/components/services";
 import Project from "@/components/project";
-import CaseStudies from "@/components/casestudies";
+import WorkflowTimeline from "@/components/workflow-timeline";
+import Contact from "@/components/contact";
+import Footer from "@/app/footer/footer";
 
 
 
@@ -16,8 +18,10 @@ export default function Home() {
       <About />
       <Skills />
       <Project />
-      <CaseStudies />
+      <WorkflowTimeline />
       <Services />
+      <Contact />
+      <Footer />
     </>
   );
 }
