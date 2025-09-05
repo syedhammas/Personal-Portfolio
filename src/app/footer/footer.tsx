@@ -1,18 +1,17 @@
 "use client";
 
-import Globe from "@/components/globe";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function Footer3() {
     return (
-        <footer className="relative bg-black text-white py-12 overflow-hidden">
+        <footer className="relative text-white py-12 overflow-hidden">
             {/* Neon Border Top */}
             <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 transition={{ duration: 1.5 }}
-                className="absolute top-0 left-0 h-1 bg-gradient-to-r from-cyan-400 via-white to-cyan-400 shadow-[0_0_20px_#22d3ee]"
+                className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#C0AA83] via-white to-[#C0AA83] shadow-[0_0_20px_#C0AA83]"
             ></motion.div>
 
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
@@ -21,10 +20,10 @@ export default function Footer3() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl font-extrabold text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]"
+                    className="text-3xl font-extrabold text-[#C0AA83] drop-shadow-[0_0_25px_#C0AA83]"
                     style={{ fontFamily: '"Perfecto Calligraphy", cursive' }}
                 >
-                    Syed Aliyar
+                    Syed Aaliyar
                 </motion.h1>
 
                 {/* Navigation */}
@@ -41,19 +40,14 @@ export default function Footer3() {
                                 href={`#${link.toLowerCase()}`}
                                 className="relative group"
                             >
-                                <span className="transition text-gray-300 group-hover:text-cyan-400">
+                                <span className="transition text-gray-300 group-hover:text-[#C0AA83]">
                                     {link}
                                 </span>
-                                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-500"></span>
+                                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C0AA83] group-hover:w-full transition-all duration-500"></span>
                             </a>
                         )
                     )}
                 </motion.div>
-
-                {/*               
-                <div className="flex items-center justify-center ">
-                    <Globe />
-                </div> */}
 
                 {/* Social Icons */}
                 <motion.div
@@ -72,7 +66,7 @@ export default function Footer3() {
                             key={i}
                             href={social.link}
                             whileHover={{ scale: 1.2, rotate: 10 }}
-                            className="w-10 h-10 flex items-center justify-center rounded-full border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400 hover:text-black transition shadow-[0_0_10px_#22d3ee]"
+                            className="w-10 h-10 flex items-center justify-center rounded-full border border-[#C0AA83]/50 text-[#C0AA83] hover:bg-[#C0AA83] hover:text-black transition shadow-[0_0_10px_#C0AA83]"
                         >
                             {social.icon}
                         </motion.a>
@@ -88,7 +82,7 @@ export default function Footer3() {
                 className="text-center text-gray-500 text-sm mt-10"
             >
                 © {new Date().getFullYear()}{" "}
-                <span className="text-cyan-400 font-semibold">Syed Aliyar</span>. All
+                <span className="text-[#C0AA83] font-extrabold">Syed Aaliyar</span>. All
                 Rights Reserved.
             </motion.div>
         </footer>

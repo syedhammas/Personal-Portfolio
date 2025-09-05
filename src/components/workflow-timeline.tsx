@@ -42,9 +42,9 @@ export default function WorkflowTimeline() {
 
             <div className="relative text-center mb-16">
                 <h2 className="text-4xl md:text-5xl py-5 font-extrabold text-white">
-                    My <span className="text-cyan-400 drop-shadow-[0_0_25px_#22d3ee]">Workflow</span>
+                    My <span className="text-[#C0AA83]">Workflow</span>
                 </h2>
-                <div className="w-32 h-1 bg-cyan-400 mx-auto mt-4 rounded-full shadow-[0_0_18px_#22d3ee]" />
+                <div className="w-32 h-1 bg-[#C0AA83] mx-auto mt-4 rounded-full shadow-[0_0_18px_#C0AA83]" />
                 <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
                     A clean, repeatable process—from discovery to launch—optimized for
                     quality and speed.
@@ -73,7 +73,7 @@ export default function WorkflowTimeline() {
                                 <div className="hidden md:flex items-center justify-center w-14 shrink-0">
                                     <div className="relative">
                                         <span className="absolute inset-0 blur-lg rounded-full" />
-                                        <span className="block w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_18px_#22d3ee]" />
+                                        <span className="block w-4 h-4 rounded-full bg-[#C0AA83] shadow-[0_0_18px_#C0AA83]" />
                                     </div>
                                 </div>
 
@@ -81,24 +81,24 @@ export default function WorkflowTimeline() {
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ type: "spring", stiffness: 220, damping: 18 }}
-                                    className="group relative flex-1 rounded-2xl border border-gray-800 bg-gray-900/70 backdrop-blur-md p-6 shadow-lg hover:border-cyan-400 hover:shadow-[0_0_28px_#22d3ee] transition"
+                                    className="group relative flex-1 rounded-2xl border border-gray-800 bg-gradient-to-br from-[#0b0410] to-[#271D19] backdrop-blur-md p-6 shadow-lg hover:border-[#C0AA83] hover:shadow-[0_0_28px_#C0AA83] transition"
                                 >
 
                                     <div className="flex items-start gap-4">
                                         <div className="mt-0.5">
                                             <div className="relative">
                                                 <span className="absolute -inset-2 blur-md rounded-xl opacity-0 group-hover:opacity-100 transition" />
-                                                <Icon className="w-8 h-8 text-cyan-400 drop-shadow-[0_0_12px_#22d3ee]" />
+                                                <Icon className="w-8 h-8 text-[#C0AA83] drop-shadow-[0_0_12px_#C0AA83]" />
                                             </div>
                                         </div>
                                         <div>
-                                            <h3 className="text-xl md:text-2xl font-semibold text-cyan-300">{s.title}</h3>
+                                            <h3 className="text-xl md:text-2xl font-semibold text-[#C0AA83]">{s.title}</h3>
                                             <p className="mt-2 text-gray-400 leading-relaxed">{s.desc}</p>
                                         </div>
                                     </div>
 
                                     <div className={`absolute -top-3 ${isRight ? "left-4 md:left-auto md:right-4" : "right-4"}`}>
-                                        <span className="px-3 py-1 text-xs font-semibold tracking-wide rounded-full  text-cyan-300 border border-cyan-400/30">
+                                        <span className="px-3 py-1 text-xs font-semibold tracking-wide rounded-full  text-[#C0AA83] border border-[#C0AA83]/30">
                                             STEP {s.id}
                                         </span>
                                     </div>
@@ -108,7 +108,7 @@ export default function WorkflowTimeline() {
                     })}
                 </ul>
 
-                <div className=" mt-12 h-px w-full bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent" />
+                <div className=" mt-16 h-px w-full bg-gradient-to-r from-transparent via-[#C0AA83]/30 to-transparent" />
             </div>
         </section>
     );

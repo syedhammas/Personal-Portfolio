@@ -1,11 +1,13 @@
 import "./globals.css";
-// import ShaderBackground from "@/components/background";
+import ScrollProgressBar from "@/components/page-scroll";
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="relative w-full h-full text-white">
 
+      <body>
+        <ScrollProgressBar />
         <main className="relative z-10">{children}</main>
       </body>
     </html>
