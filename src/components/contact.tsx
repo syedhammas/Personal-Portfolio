@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import Globe from "./globe";
 
 
 export default function ContactSection8() {
@@ -28,6 +29,7 @@ export default function ContactSection8() {
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
                 form.current,
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+
             )
             .then(
                 () => {
@@ -58,17 +60,11 @@ export default function ContactSection8() {
                     initial={{ y: 40, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="space-y-6"
+                    className="space-y-6 flex flex-col items-center md:items-center text-center"
                 >
-                    <div className="w-full h-56 rounded-lg overflow-hidden relative">
-                        <img
-                            src="/map.webp"
-                            alt="Map"
-                            className="w-full h-full object-cover opacity-80"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <MapPin className="text-[#C0AA83] w-10 h-10 drop-shadow-lg" />
-                        </div>
+                    <div>
+                        <Globe />
+                        <h3 className="text-lg font-semibold text-[#C0AA83]">Find Me</h3>
                     </div>
 
                     <div className="space-y-4 text-sm">
@@ -83,6 +79,7 @@ export default function ContactSection8() {
                         </p>
                     </div>
                 </motion.div>
+
 
                 {/* Middle - Form */}
                 <motion.div
