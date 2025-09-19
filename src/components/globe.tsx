@@ -49,13 +49,14 @@ const Globe: React.FC<GlobeProps> = ({
 }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const globeRef = useRef<any>(null);
+    const globeRef = useRef<ReturnType<typeof createGlobe> | null>(null);
     const phiRef = useRef(0);
     const thetaRef = useRef(theta);
     const isDragging = useRef(false);
     const lastMouseX = useRef(0);
     const lastMouseY = useRef(0);
     const autoRotateSpeed = 0.003;
+
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -123,6 +124,7 @@ const Globe: React.FC<GlobeProps> = ({
                     state.phi = phiRef.current;
                     state.theta = thetaRef.current;
                 },
+
             });
         };
 

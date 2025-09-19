@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { SlidingLogoMarquee } from "./sliding-logo";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiJavascript } from "react-icons/si";
+import Image from "next/image"; // ab use karenge <Image /> ke liye
 
 export default function Hero() {
-
     const techIcons = [
         {
             id: "react",
@@ -85,7 +84,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8 }}
                                 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight text-white"
                             >
-                                Hello, I'm <br />
+                                Hello, I&apos;m <br />
                                 <span className="bg-[#C0AA83] shadow-[#C0AA83] text-transparent bg-clip-text ">
                                     Syed Aaliyar
                                 </span>
@@ -98,7 +97,7 @@ export default function Hero() {
                                 transition={{ duration: 1.2 }}
                                 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-white"
                             >
-                                Front-End Developer | React & Next.js Enthusiast
+                                Front-End Developer | React &amp; Next.js Enthusiast
                             </motion.h2>
 
                             <motion.p
@@ -107,10 +106,10 @@ export default function Hero() {
                                 transition={{ duration: 1.4 }}
                                 className="text-base md:text-lg lg:text-xl text-white leading-7 md:leading-8 mb-8 lg:mb-10"
                             >
-                                I create <span className="text-white font-medium">modern, responsive, and scalable web apps</span> using cutting-edge technologies like{' '}
-                                <span className="text-white">JavaScript</span>,{' '}
-                                <span className="text-white">React</span>,{' '}
-                                <span className="text-white">Next.js</span>, and{' '}
+                                I create <span className="text-white font-medium">modern, responsive, and scalable web apps</span> using cutting-edge technologies like{" "}
+                                <span className="text-white">JavaScript</span>,{" "}
+                                <span className="text-white">React</span>,{" "}
+                                <span className="text-white">Next.js</span>, and{" "}
                                 <span className="text-white">Tailwind CSS</span>.
                                 With <span className="font-medium text-white">1 year of hands-on experience</span>, I specialize in transforming Figma designs into pixel-perfect, production-ready solutions.
                             </motion.p>
@@ -132,7 +131,7 @@ export default function Hero() {
                                     href="#contact"
                                     className="px-6 lg:px-8 py-3 rounded-full text-white border-2 border-[#C0AA83] font-semibold hover:bg-[#C0AA83] hover:text-black transition shadow-lg"
                                 >
-                                    Let's Connect
+                                    Let&apos;s Connect
                                 </a>
                             </motion.div>
                         </div>
@@ -145,15 +144,13 @@ export default function Hero() {
                                 transition={{ duration: 1, delay: 0.4 }}
                                 className="relative"
                             >
-                                {/* Golden Glow */}
-                                {/* <div className="absolute inset-0 rounded-full bg-[#C0AA83] blur-2xl opacity-30 scale-110 animate-pulse"></div> */}
-
-                                {/* Profile Image */}
                                 <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-4 border-[#C0AA83]/60 shadow-2xl shadow-[#C0AA83]">
-                                    <img
+                                    <Image
                                         src="/hammas.jpg"
                                         alt="Syed Hammas"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
+                                        priority
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-amber-900/20 to-transparent"></div>
                                 </div>
@@ -162,14 +159,13 @@ export default function Hero() {
                     </div>
                 </div>
             </section>
+
             {/* Floating Tech Icons */}
             <div className="flex justify-center md:py-20 items-center">
                 <div className="flex justify-center items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 pointer-events-none">
                     <SlidingLogoMarquee items={techIcons} showControls={false} />
                 </div>
             </div>
-
-
         </>
     );
 }
